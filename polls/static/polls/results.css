@@ -1,0 +1,8 @@
+body{
+    background: white url("images/flower.jpg") repeat-y ;
+    background-position: right ;
+}
+
+li a {
+    color: green;
+}

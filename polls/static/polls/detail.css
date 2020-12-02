@@ -1,0 +1,8 @@
+body{
+    background: white url("images/pado.png") repeat-x;
+    background-position: top 300px;
+
+}
+li a {
+    color: green;
+}
