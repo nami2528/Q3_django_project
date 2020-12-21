@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% extends 'base.html' %}
+
+{% block title %}Polls Detail{% endblock %}
+
+{% block content %}
        {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/detail.css' %}">
-</head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Oswald:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="{% static 'polls/detail.css' %}">
+
 <body>
+
+<div class="page-header">
+    <h1><a href="{% url 'polls:index' %}">HYWU&nbsp;&nbsp; Polls&nbsp;&nbsp; Survey</a></h1>
+</div>
+
 <h1>{{question.question_text}}</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
@@ -20,4 +29,4 @@
     <input type="submit" value="Vote">
 </form>
 </body>
-</html>
+{% endblock %}

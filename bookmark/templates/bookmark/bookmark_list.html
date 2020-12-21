@@ -5,6 +5,11 @@ Bookmark List
 {% endblock %}
 
 {% block content %}
+{% load static %}
+
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'bookmark/style.css' %}">
+
 <div class="btn-group">
     <a href="{% url 'bookmark:add' %}" class="btn btn-info">Add Bookmark</a>
 </div>
@@ -22,7 +27,7 @@ Bookmark List
     <tbody>
     {% for bookmark in object_list %}
        <tr>
-           <td>{{forloop.counter}}</td>
+           <td><a href="{{bookmark.url}}" target="_blank">{{forloop.counter}}</a> </td>
            <td><a href="{% url 'bookmark:detail' pk=bookmark.id %}">{{bookmark.site_name}}</a> </td>
            <td><a href="{{bookmark.url}}" target="_blank">{{bookmark.url}}</a> </td>
            <td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify </a> </td>

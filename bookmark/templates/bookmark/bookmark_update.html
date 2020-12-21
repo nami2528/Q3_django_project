@@ -3,6 +3,9 @@
 {% block title %}Bookmark Update{% endblock %}
 
 {% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bookmark/style.css' %}">
+
 <form action="" method="post">
     {% csrf_token %}
     {{form.as_p}}
@@ -10,3 +13,5 @@
 </form>
 
 {% endblock %}
+
+

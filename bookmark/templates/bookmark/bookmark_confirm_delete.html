@@ -3,6 +3,9 @@
 {% block title %}Confirm Delete{% endblock %}
 
 {% block content %}
+ {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bookmark/style.css' %}">
+
 <form action="" method="post">
     {% csrf_token %}
     <div class="alert alert-danger"> Do you want to delete Bookmark "{{object}}"?</div>

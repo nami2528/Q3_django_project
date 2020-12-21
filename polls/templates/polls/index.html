@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% extends 'base.html' %}
+
+{% block title %}Polls index{% endblock %}
+
+{% block content %}
     {% load static %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-</head>
+
 <body>
+<div class="page-header">
+    <h1><a href="{% url 'polls:index' %}">HYWU&nbsp;&nbsp; Polls&nbsp;&nbsp; Survey</a></h1>
+</div>
+
 {% if latest_question_list %}
 <ul>
     {% for question in latest_question_list %}
@@ -17,4 +25,5 @@
 <p>No polls are available.</p>
 {% endif %}
 </body>
-</html>
+
+{% endblock %}

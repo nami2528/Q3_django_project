@@ -1,9 +1,10 @@
 body{
     background: white url("images/background.png") no-repeat;
-    background-position: center;
-    background-size: 10%;
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: 30%;
     height: 500px;
-    border-top: 10px solid #ccc;
+    /*border-top: 10px solid #ccc;*/
 }
 
 title{
@@ -13,4 +14,5 @@ title{
 
 li a{
     color: green;
+    font-size: 18px;
 }

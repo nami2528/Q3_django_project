@@ -19,6 +19,7 @@ class BookmarkCreateView(CreateView):
 class BookmarkDetailView(DetailView):
     model=Bookmark
 
+
 class BookmarkUpdateView(UpdateView):
     model=Bookmark
     fields=['site_name', 'url']
